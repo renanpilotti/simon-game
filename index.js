@@ -9,20 +9,15 @@ document.addEventListener('keydown', (e) => {
     }
 )
 
-handleClick()
-
-function handleClick() {
-
-    const botoes = document.querySelectorAll('.btn')
-    botoes.forEach((e) => {
-        e.addEventListener('click', () => {
-            piscaBotao(e.id)
-            arrayJogador.push(e.id)
-            testaErro()
-            proximaCor()
-        })
+const botoes = document.querySelectorAll('.btn')
+botoes.forEach((e) => {
+    e.addEventListener('click', () => {
+        piscaBotao(e.id)
+        arrayJogador.push(e.id)
+        testaErro()
+        proximaCor()
     })
-}
+})
 
 function iniciaJogo() {
     if (!inicio) {
@@ -52,19 +47,16 @@ function proximaCor() {
 }
 
 function testaErro() {
-    for (let i = 0; i < arrayJogador.length; i++) {
-        if (arrayJogador[i] !== arrayPronto[i]) {
-            inicio = false
-            nivel = 0
-            document.querySelector('body').classList.add('game-over')
-            setTimeout(() => {
-                document.querySelector('body').classList.remove('game-over')
-            }, 500);
-            document.querySelector('#level-title').innerText = 'Game Over :('
-            document.querySelector('.reiniciar-jogo').classList.remove('hide')
-            tocaSom('game-over')
-            console.log('gameover')
-        }
+    if (arrayJogador[arrayJogador.length - 1] !== arrayPronto[arrayJogador.length - 1]) {
+        inicio = false
+        nivel = 0
+        document.querySelector('body').classList.add('game-over')
+        setTimeout(() => {
+            document.querySelector('body').classList.remove('game-over')
+        }, 500);
+        document.querySelector('#level-title').innerText = 'Game Over :('
+        document.querySelector('.reiniciar-jogo').classList.remove('hide')
+        tocaSom('game-over')
     }
 }
 
