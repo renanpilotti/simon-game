@@ -1,0 +1,66 @@
+body {
+  text-align: center;
+  background-color: #e7f4ff;
+}
+
+#level-title, h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5rem;
+  margin: 3%;
+  color: black;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.btn {
+  margin: 15px;
+  display: inline-block;
+  height: 180px;
+  width: 180px;
+  /* border: 5px solid black; */
+  border-radius: 20%;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 2px 2px 6px 1px;}
+
+.game-over {
+  background-color: rgba(255, 29, 29, 0.605);
+  opacity: 0.6;
+}
+
+.red {
+  background-color: #ff695b;
+}
+
+.green {
+  background-color: #88ba20;
+}
+
+.blue {
+  background-color: #0f7cc9;
+}
+
+.yellow {
+  background-color: #ffc633;
+}
+
+.pressed {
+  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.451);
+  opacity: 80%;
+  transform: scale(102%);
+  transition: 0.2s all;
+}
+
+.reiniciar-jogo {
+  font-size: 2rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
+}
+
+.hide {
+  display: none;
+}
