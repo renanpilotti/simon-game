@@ -83,7 +83,7 @@ function piscaSequencia() {
 
 function atualizaNivel() {
     nivel++
-    document.querySelector('#level-title').innerHTML = 'Nível ' + nivel
+    document.querySelector('#level-title').innerText = 'Nível ' + nivel
 }
 
 function tocaSom(nome) {
